@@ -15,7 +15,7 @@ if($imagem != NULL) {
 
 		mysqli_connect($host,$username,$password) or die("Impossível Conectar");
 
-		@mysqli_select_db() or die("Impossível Conectar");
+		mysqli_select_db($db) or die("Impossível Conectar");
 
 		mysqli_query("INSERT INTO PESSOA (PES_IMG) VALUES ('$mysqlImg')") or
 		die("O sistema não foi capaz de executar a query");
